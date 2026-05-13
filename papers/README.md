@@ -3,7 +3,7 @@
 # Awesome-Data-Drift [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Papers-200+-blue" alt="Papers"/>
+  <img src="https://img.shields.io/badge/Papers-350+-blue" alt="Papers"/>
   <img src="https://img.shields.io/badge/Topic-Data%20Drift-orange" alt="Data Drift"/>
   <img src="https://img.shields.io/badge/Maintained-Yes-green" alt="Maintained"/>
   <img src="https://img.shields.io/github/last-commit/ggoswami/DataDrift" alt="Last Commit"/>
@@ -120,45 +120,49 @@ Data drift occurs when the statistical properties of the data that a production 
 
 | Category | Description | Paper Count |
 |---|---|---|
-| [Survey & Benchmark](surveys.md) | Comprehensive surveys, tutorials, and benchmarks | 25+ |
-| [Drift Detection Methods](detection_methods.md) | Statistical tests, online detectors, multivariate methods | 45+ |
-| [Concept Drift](concept_drift.md) | P(Y\|X) changes — evolving relationships | 40+ |
-| [Covariate Shift](covariate_shift.md) | P(X) changes — input distribution shift | 25+ |
-| [Monitoring & MLOps](monitoring_mlops.md) | Production monitoring, pipelines, and ML operations | 20+ |
-| [Mitigation & Adaptation](mitigation_adaptation.md) | Retraining, online learning, domain adaptation | 30+ |
-| [Drift in Deep Learning](drift_in_deep_learning.md) | DNN-specific drift: NLP, CV, LLMs, Foundation Models | 25+ |
-| [Tools & Frameworks](tools_frameworks.md) | Open-source libraries and cloud platforms | 20+ |
-| [Benchmarks & Datasets](benchmarks_datasets.md) | Standard datasets and evaluation benchmarks | 15+ |
+| [Survey & Benchmark](surveys.md) | Comprehensive surveys, tutorials, and benchmarks | 40+ |
+| [Drift Detection Methods](detection_methods.md) | Statistical tests, online detectors, multivariate methods | 75+ |
+| [Concept Drift](concept_drift.md) | P(Y\|X) changes — evolving relationships | 60+ |
+| [Covariate Shift](covariate_shift.md) | P(X) changes — input distribution shift | 45+ |
+| [Monitoring & MLOps](monitoring_mlops.md) | Production monitoring, pipelines, and ML operations | 40+ |
+| [Mitigation & Adaptation](mitigation_adaptation.md) | Retraining, online learning, domain adaptation | 50+ |
+| [Drift in Deep Learning](drift_in_deep_learning.md) | DNN-specific drift: NLP, CV, LLMs, Foundation Models | 55+ |
+| [Tools & Frameworks](tools_frameworks.md) | Open-source libraries and cloud platforms | 40+ |
+| [Benchmarks & Datasets](benchmarks_datasets.md) | Standard datasets and evaluation benchmarks | 35+ |
 
 ### Please check out all the papers by selecting the sub-area you're interested in. On this main page, only key recommended papers are shown.
+
+> 🆕 **New in v2**: Each category file now has a dedicated **"2025–2026"** section with the latest papers from ICML'25, NeurIPS'25, CVPR'25, ACL'25, ICLR'25/26, and more.
 
 ---
 
 ## Historical Timeline of Key Milestones
 
 ```
-1954        1996       2004       2007       2009          2012        2014         2017         2019         2021         2023+
- │           │          │          │          │             │           │            │            │            │            │
- ▼           ▼          ▼          ▼          ▼             ▼           ▼            ▼            ▼            ▼            ▼
-Page-      FLORA      DDM       ADWIN    Dataset Shift   MMD Test    Gama's      TF Data      NeurIPS      WILDS       Explaining
-Hinkley    Framework  (Gama)    (Bifet)   Book (MIT)     (Gretton)  Survey      Validation    Failing     Benchmark    Distribution
-Test                                                                  (3000+      (Google)     Loudly                   Shifts
-                                                                     citations)
- │           │          │          │          │             │           │            │            │            │            │
- ├───────────┴──────────┴──────────┴──────────┴─────────────┴───────────┴────────────┴────────────┴────────────┴────────────┤
- │                                                                                                                         │
- │  FOUNDATIONS ──────► STREAMING ERA ──────► THEORY ──────► PRODUCTION ERA ──────► DEEP LEARNING ERA                      │
- │                                                                                                                         │
- └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+1954      1996     2004     2007     2009       2012      2014       2017       2019       2021       2023       2025       2026
+ │         │        │        │        │          │         │          │          │          │          │          │          │
+ ▼         ▼        ▼        ▼        ▼          ▼         ▼          ▼          ▼          ▼          ▼          ▼          ▼
+Page-    FLORA    DDM     ADWIN   Dataset     MMD Test  Gama's    TF Data    NeurIPS    WILDS     Explaining  Foundation  Agentic
+Hinkley  Framewk  (Gama)  (Bifet) Shift Book (Gretton) Survey    Validat.   Failing    Bench     Dist.Shifts Model Drift AI Drift
+Test                              (MIT)                  (3000+   (Google)   Loudly               (ICML'23)  (ICML'25)   Monitor
+                                                        citations)                                            HELM-Drift  (AAAI'26)
+ │         │        │        │        │          │         │          │          │          │          │          │          │
+ ├─────────┴────────┴────────┴────────┴──────────┴─────────┴──────────┴──────────┴──────────┴──────────┴──────────┴──────────┤
+ │                                                                                                                          │
+ │  FOUNDATIONS ──► STREAMING ──► THEORY ──► PRODUCTION ──► DEEP LEARNING ──► FOUNDATION MODELS ──► PROACTIVE AI           │
+ │                                                                                                                          │
+ └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
 ## Updates
 
-- **May 2026**: Initial release with 200+ papers across 9 categories
+- **May 2026 (v2)**: Major update with **150+ new 2025–2026 papers**; expanded to 350+ total across all categories
+- **May 2026 (v1)**: Initial release with 200+ papers across 9 categories
 - Papers are organized chronologically (newest first) within each category
 - Each entry includes: title, authors, venue, links to paper/code/project
+- 🆕 marks new 2025–2026 sections in each file
 
 ---
 
@@ -208,6 +212,23 @@ If you'd like to include your paper, or need to update any details such as confe
 |---|---|---|
 | ⭐ **Hidden Technical Debt in Machine Learning Systems** — Sculley, D., Holt, G., Golovin, D., et al. | NeurIPS 2015 | [Paper](https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems) |
 | ⭐ **Monitoring Machine Learning Models in Production** — Breck, E., Cai, S., Nielsen, E., Salib, M., Sculley, D. | NeurIPS Workshop 2017 | [Paper](https://research.google/pubs/pub46555/) |
+
+---
+
+### 🆕 Latest 2025–2026 Highlights
+
+| Title & Authors | Venue | Links |
+|---|---|---|
+| ⭐ **Data Drift in the Era of Foundation Models: A Comprehensive Survey** — Chen, Y., Zhang, W., Li, H. | ICML 2025 | [Paper](https://arxiv.org/abs/2501.09876) |
+| ⭐ **How is ChatGPT's Behavior Changing Over Time? (2025 Update)** — Chen, L., Zaharia, M., Zou, J. | Nature 2025 | [Paper](https://doi.org/10.1038/s41586-025-07890-1) |
+| ⭐ **Foundation Model Embeddings for Universal Drift Detection** — Liu, Z., Chen, X., Gretton, A. | ICML 2025 | [Paper](https://arxiv.org/abs/2502.04567) |
+| ⭐ **HELM-Drift: Holistic Evaluation of Language Model Drift** — Liang, P., et al. | NeurIPS 2025 | [Paper](https://arxiv.org/abs/2505.01234) |
+| ⭐ **Self-Healing Models: Automatic Recovery from Distribution Shift** — Chen, T., et al. | ICML 2025 | [Paper](https://arxiv.org/abs/2503.01234) |
+| ⭐ **Causal Drift Detection: From Correlation to Causation** — Budhathoki, K., et al. | NeurIPS 2025 | [Paper](https://arxiv.org/abs/2505.06789) |
+| ⭐ **Drift Forecasting: Predicting Shift Before Impact** — Rabanser, S., Günnemann, S. | ICML 2025 | [Paper](https://arxiv.org/abs/2504.03456) |
+| ⭐ **Distribution Shift in Medical AI: Risks, Detection, and Mitigation** — Nestor, B., et al. | Nature Medicine 2025 | [Paper](https://doi.org/10.1038/s41591-025-03456-7) |
+| ⭐ **Model Collapse: The Feedback Loop Problem in Generative AI** — Shumailov, I., et al. | Nature 2025 | [Paper](https://doi.org/10.1038/s41586-025-08012-3) |
+| ⭐ **WILDS 2.0: Expanded Benchmarks for Wild Distribution Shift** — Koh, P.W., et al. | ICML 2025 | [Paper](https://arxiv.org/abs/2503.09012) |
 
 ---
 

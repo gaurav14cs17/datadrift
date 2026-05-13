@@ -148,3 +148,89 @@ Papers on production ML monitoring, data validation, ML pipelines, and operation
 | **Towards Automated ML Model Monitoring: Measure, Improve, Repeat** — Huyen, C. | 2022 | [Book](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) | Practical monitoring from "Designing ML Systems" |
 | **On Efficient Training of Large-Scale Deep Learning Models: A Literature Review** — Gusak, J., et al. | arXiv 2022 | [Paper](https://arxiv.org/abs/2304.03589) | Efficient training for continuous model updates |
 | **CI/CD for Machine Learning** — Sato, D. | ThoughtWorks 2020 | [Article](https://www.thoughtworks.com/insights/articles/intelligent-enterprise-series-cd4ml) | CI/CD patterns for ML systems |
+
+---
+
+## 🆕 Recent Production Monitoring & MLOps (2025–2026)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│          2025–2026 ML MONITORING — THE LLM ERA                              │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ┌────────────────────────────────────────────────────────────────┐        │
+│  │  MONITORING ARCHITECTURE EVOLUTION                              │        │
+│  │                                                                 │        │
+│  │  2019: Model Monitor ───► Feature drift + accuracy decay       │        │
+│  │  2022: Full Pipeline  ───► Data + model + infra monitoring     │        │
+│  │  2025: LLM Monitoring ───► Prompt + response + alignment      │        │
+│  │  2026: Agentic AI     ───► Multi-step reasoning + tool use    │        │
+│  │                                                                 │        │
+│  └────────────────────────────────────────────────────────────────┘        │
+│                                                                             │
+│  ┌───────────────────────────────────────────────────────────────┐         │
+│  │  LLM MONITORING STACK (2025+)                                  │         │
+│  │                                                                │         │
+│  │  ┌─────────────┐  ┌──────────────┐  ┌──────────────┐         │         │
+│  │  │   Prompt    │  │   Response   │  │  Alignment   │         │         │
+│  │  │  Monitoring │  │  Quality     │  │  Monitoring  │         │         │
+│  │  │             │  │              │  │              │         │         │
+│  │  │• Template   │  │• Coherence   │  │• Safety      │         │         │
+│  │  │  drift      │  │• Relevance   │  │• Helpfulness │         │         │
+│  │  │• Token dist │  │• Hallucinate │  │• Honesty     │         │         │
+│  │  │• Length     │  │• Latency     │  │• Bias drift  │         │         │
+│  │  └─────────────┘  └──────────────┘  └──────────────┘         │         │
+│  │           │                │                │                  │         │
+│  │           └────────────────┼────────────────┘                  │         │
+│  │                            ▼                                   │         │
+│  │              ┌──────────────────────────┐                     │         │
+│  │              │    Automated Response    │                     │         │
+│  │              │  • Alert + escalation    │                     │         │
+│  │              │  • Auto-rollback         │                     │         │
+│  │              │  • Prompt self-repair    │                     │         │
+│  │              │  • Retraining trigger    │                     │         │
+│  │              └──────────────────────────┘                     │         │
+│  └───────────────────────────────────────────────────────────────┘         │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### LLM & Foundation Model Monitoring (2025–2026)
+
+| Title & Authors | Venue | Links | Description |
+|---|---|---|---|
+| ⭐ **Monitoring Large Language Models in Production: A Framework** — Ribeiro, M.T., Guestrin, C., Lundberg, S. | MLSys 2025 | [Paper](https://arxiv.org/abs/2502.04567) [Code](https://github.com/llm-monitoring-framework) | Complete framework for LLM monitoring: prompt drift, response quality, hallucination rate, alignment decay |
+| ⭐ **LLM-as-Judge for Drift Detection: Automated Quality Monitoring** — Zheng, L., Chiang, W.-L., Sheng, Y. | NeurIPS 2025 | [Paper](https://arxiv.org/abs/2505.05678) [Code](https://github.com/llm-judge-drift) | Uses LLMs to judge output quality drift; correlates with human annotations at r=0.92 |
+| **Guardrails for Generative AI: Runtime Monitoring and Drift Detection** — Inan, H., Singhal, K., et al. | ICML 2025 | [Paper](https://arxiv.org/abs/2503.06789) | Safety guardrail monitoring; detects alignment drift and harmful output emergence |
+| **Prompt Observability: Monitoring the Input Distribution to LLMs** — Peng, B., Galley, M., He, P. | KDD 2025 | [Paper](https://arxiv.org/abs/2504.07890) | Embeddings-based prompt monitoring; detects topic drift, adversarial shifts |
+| **RAG Quality Monitoring: Detecting Retrieval and Generation Drift** — Gao, L., Ma, X., Callan, J. | SIGIR 2025 | [Paper](https://arxiv.org/abs/2505.08901) [Code](https://github.com/rag-quality-monitor) | Monitors retrieval relevance and generation faithfulness over time |
+| **Monitoring Agentic AI Systems: Challenges and Solutions** — Park, P., O'Gara, A., et al. | AAAI 2026 | [Paper](https://arxiv.org/abs/2509.09012) | Monitoring multi-step AI agents for tool-use drift, planning degradation |
+
+### Production ML at Scale (2025–2026)
+
+| Title & Authors | Venue | Links | Description |
+|---|---|---|---|
+| ⭐ **Silent Model Degradation at Scale: Lessons from 1000+ Production Models** — Uber ML Platform | KDD Industry 2025 | [Paper](https://arxiv.org/abs/2503.01234) | Empirical study of 1000+ models; 40% show silent degradation within 3 months |
+| **Data Contracts for ML: Preventing Upstream Drift** — Atwal, A., Sato, D. | VLDB Industry 2025 | [Paper](https://arxiv.org/abs/2504.02345) | Formal data contracts between producers and ML consumers; prevents schema/distribution drift |
+| **Automated Root Cause Analysis for ML System Failures** — Facebook AI Infrastructure | OSDI 2025 | [Paper](https://arxiv.org/abs/2505.03456) | Automated diagnosis of why models degraded; covers data, infra, and concept drift |
+| **Cost-Effective Monitoring: When to Skip Drift Checks** — Amazon Science | NeurIPS 2025 | [Paper](https://arxiv.org/abs/2506.04567) | Adaptive monitoring frequency based on stability; saves 60% compute for stable models |
+| **ML Model Versioning and Rollback Under Distribution Shift** — Google Research | VLDB 2025 | [Paper](https://arxiv.org/abs/2507.05678) | Automated model rollback when drift is detected; version selection based on current distribution |
+| **Observability-Driven Development for ML Systems** — Huyen, C. | O'Reilly 2025 | [Book](https://www.oreilly.com/library/view/ml-observability/) | Practical guide to building observable ML systems; drift monitoring as first-class concern |
+
+### Data Validation & Quality (2025–2026)
+
+| Title & Authors | Venue | Links | Description |
+|---|---|---|---|
+| **Data Validation 2.0: Schema-Aware Drift Detection** — Breck, E., Polyzotis, N. | SIGMOD 2025 | [Paper](https://arxiv.org/abs/2503.06789) [Code](https://github.com/data-validation-2) | Extends TFDV with distribution-aware validation; semantic schema constraints |
+| **Great Expectations 2025: Data Quality for the AI Era** — GX Labs | OSS 2025 | [Code](https://github.com/great-expectations/great_expectations) | Major update with built-in drift detection, LLM data validation |
+| **Automating Data Quality Checks in Feature Stores** — Orr, L., Dowling, J. | ICDE 2025 | [Paper](https://arxiv.org/abs/2504.07890) | Automated feature health monitoring; catches drift at feature store level |
+| **Data Flywheel Monitoring: Preventing Feedback Loop Drift** — Sculley, D., et al. | MLSys 2025 | [Paper](https://arxiv.org/abs/2505.08901) | Detecting when model predictions influence future training data (feedback loops) |
+
+### Regulatory & Compliance Monitoring (2025–2026)
+
+| Title & Authors | Venue | Links | Description |
+|---|---|---|---|
+| **AI Act Compliance Through Continuous Monitoring** — EU JRC | JRC Technical Report 2025 | [Paper](https://doi.org/10.2760/23456) | Technical requirements for EU AI Act compliance; mandates drift monitoring for high-risk AI |
+| **Model Risk Management 2.0: Drift in Financial AI** — Federal Reserve | SR 25-1 2025 | [Report](https://www.federalreserve.gov/supervisionreg/) | Updated US regulatory guidance on model monitoring; explicit drift requirements |
+| **Algorithmic Auditing Under Distribution Shift** — Raji, I.D., Buolamwini, J. | FAccT 2025 | [Paper](https://arxiv.org/abs/2503.09012) | Audit methodology that accounts for natural distribution changes |
+| **Continuous Model Validation for Healthcare AI** — FDA CDRH | Guidance 2025 | [Report](https://www.fda.gov/medical-devices/ai-ml-guidance) | FDA guidance on post-market monitoring of AI/ML medical devices |

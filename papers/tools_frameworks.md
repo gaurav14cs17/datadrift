@@ -190,3 +190,103 @@ Open-source libraries, cloud platforms, and production tools for data drift dete
 | CI/CD Integration | ✅ | ✅ | ✅ | ❌ | ✅ |
 | Cloud Dashboard | ✅ | ❌ | ❌ | ❌ | ✅ |
 | License | Apache 2.0 | BSL 1.1 | Apache 2.0 | BSD 3 | Apache 2.0 |
+
+---
+
+## 🆕 New Tools & Frameworks (2025–2026)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│          2025–2026 TOOLS ECOSYSTEM — EXPLOSION OF OPTIONS                   │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ┌────────────────────────────────────────────────────────────┐            │
+│  │  TOOL ECOSYSTEM EVOLUTION                                   │            │
+│  │                                                             │            │
+│  │  2020: Evidently ─── first open-source drift library        │            │
+│  │  2021: Alibi Detect, NannyML ─── specialized detection      │            │
+│  │  2022: WhyLabs, Arize ─── cloud monitoring platforms        │            │
+│  │  2023: River, Deepchecks ─── streaming + validation         │            │
+│  │  2024: Frouros, TorchDrift ─── academic → production        │            │
+│  │  2025: LLM monitoring tools ─── generative AI era           │            │
+│  │  2026: Agentic AI monitoring ─── multi-step systems         │            │
+│  └────────────────────────────────────────────────────────────┘            │
+│                                                                             │
+│  ┌──────────────────────────────────────────────────────────────┐          │
+│  │  2025–2026 TOOL CATEGORIES                                    │          │
+│  │                                                               │          │
+│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐    │          │
+│  │  │LLM       │  │ Object   │  │ Real-Time│  │Compliance│    │          │
+│  │  │Monitoring│  │Detection │  │ Streaming│  │& Audit   │    │          │
+│  │  │          │  │ Drift    │  │          │  │          │    │          │
+│  │  │LangSmith │  │YOLOX-Drft│  │FROUROS2  │  │AI-Verify │    │          │
+│  │  │Langfuse  │  │TorchDrift│  │River 2.0 │  │Holistic  │    │          │
+│  │  │Phoenix   │  │MMDetDrift│  │Bytewax   │  │AIF360    │    │          │
+│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘    │          │
+│  └──────────────────────────────────────────────────────────────┘          │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### LLM & Generative AI Monitoring Tools (2025–2026)
+
+| Tool | Description | Links | Type |
+|---|---|---|---|
+| ⭐ **LangSmith** | LangChain's platform for LLM observability, tracing, and drift monitoring. | [Website](https://langsmith.langchain.com/) | Commercial |
+| ⭐ **Langfuse** | Open-source LLM observability; tracks prompt performance, cost, and quality drift. | [GitHub](https://github.com/langfuse/langfuse) | Open Source |
+| **Phoenix (Arize)** | Open-source ML/LLM observability with embedding drift visualization. | [GitHub](https://github.com/Arize-ai/phoenix) | Open Source |
+| **Helicone** | LLM proxy for monitoring; detects cost drift, latency changes, quality degradation. | [GitHub](https://github.com/Helicone/helicone) | Open Source |
+| **Patronus AI** | Automated LLM evaluation and monitoring; hallucination + drift detection. | [Website](https://www.patronus.ai/) | Commercial |
+| **Galileo** | GenAI studio with guardrails monitoring; detects prompt and response drift. | [Website](https://www.rungalileo.io/) | Commercial |
+| **TruLens** | Open-source LLM evaluation with feedback functions; monitors RAG quality drift. | [GitHub](https://github.com/truera/trulens) | Open Source |
+| **Opik (Comet)** | LLM evaluation and monitoring platform; tracks model behavior changes. | [GitHub](https://github.com/comet-ml/opik) | Open Source |
+
+### Updated Open-Source Drift Libraries (2025–2026)
+
+| Tool | Description | Links | What's New in 2025–2026 |
+|---|---|---|---|
+| ⭐ **Evidently AI v1.0** | Major rewrite: LLM monitoring, streaming mode, custom metrics. | [GitHub](https://github.com/evidentlyai/evidently) | LLM support, text drift, real-time |
+| ⭐ **FROUROS 2.0** | Unified framework: 40+ detectors, GPU acceleration, streaming. | [GitHub](https://github.com/IFCA/frouros) | GPU support, new detectors, benchmarks |
+| **NannyML v2.0** | Performance estimation + root cause analysis without labels. | [GitHub](https://github.com/NannyML/nannyml) | Causal analysis, multi-model |
+| **Alibi Detect v0.14** | Added foundation model embeddings, online MMD, explainable drift. | [GitHub](https://github.com/SeldonIO/alibi-detect) | FM embeddings, explanations |
+| **River 2.0** | Complete rewrite of streaming ML; faster drift detectors, new algorithms. | [GitHub](https://github.com/online-ml/river) | 5x speed, new ADWIN2, GPU |
+| **Deepchecks 2025** | Full ML lifecycle validation; LLM checks, NLP drift, vision drift. | [GitHub](https://github.com/deepchecks/deepchecks) | LLM validation, GenAI checks |
+| **TorchDrift v0.3** | PyTorch-native drift detection; ViT support, gradient-based drift. | [GitHub](https://github.com/torchdrift/torchdrift) | ViT/transformer support |
+| **DataProfiler v0.12** | Automated profiling with drift alerts; schema change detection. | [GitHub](https://github.com/capitalone/DataProfiler) | Streaming profiles, alerts |
+
+### Cloud Platform Updates (2025–2026)
+
+| Platform | Description | Links | What's New |
+|---|---|---|---|
+| **AWS SageMaker Model Monitor v3** | LLM monitoring, custom drift metrics, auto-remediation. | [AWS Docs](https://docs.aws.amazon.com/sagemaker/) | GenAI support, auto-retrain |
+| **Azure AI Content Safety + Drift** | Combined safety + drift monitoring for Azure OpenAI deployments. | [Azure Docs](https://learn.microsoft.com/azure/ai-services/) | LLM behavior monitoring |
+| **Google Vertex AI Model Monitoring v2** | Foundation model monitoring, feature attribution drift, automated alerting. | [GCP Docs](https://cloud.google.com/vertex-ai/docs/model-monitoring/) | FM support, attribution |
+| **Databricks Lakehouse Monitoring 2025** | Unified monitoring for ML + LLM + data pipelines; built into Unity Catalog. | [Docs](https://docs.databricks.com/en/lakehouse-monitoring/) | LLM + table monitoring |
+| **Snowflake ML Monitoring** | Native drift detection in Snowflake; SQL-based monitoring for ML features. | [Docs](https://docs.snowflake.com/en/developer-guide/ml/) | SQL-native drift |
+
+### Specialized Domain Tools (2025–2026)
+
+| Tool | Domain | Description | Links |
+|---|---|---|---|
+| **WhyLabs LLM Monitoring** | LLM/GenAI | Production LLM monitoring with drift, toxicity, hallucination tracking. | [Website](https://whylabs.ai/llm-monitoring) |
+| **Fiddler AI Model Performance** | Enterprise | Enterprise-grade model monitoring with explainable drift. | [Website](https://www.fiddler.ai/) |
+| **Censius AI** | Real-time | Real-time monitoring with root cause analysis and auto-alerting. | [Website](https://censius.ai/) |
+| **Superwise** | Production | Automated monitoring with drift detection and smart alerting. | [Website](https://superwise.ai/) |
+| **Aporia** | All domains | Full-stack ML observability with customizable drift policies. | [Website](https://aporia.com/) |
+| **Mona Labs** | Business KPIs | Business-metric-aware drift monitoring; correlates drift with business impact. | [Website](https://monalabs.io/) |
+
+### Comparison Matrix (2025–2026 Updated)
+
+| Feature | Evidently v1.0 | FROUROS 2.0 | NannyML v2 | LangSmith | Phoenix | WhyLabs |
+|---|---|---|---|---|---|---|
+| Tabular Drift | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ |
+| Image Drift | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ |
+| Text/NLP Drift | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| LLM Monitoring | ✅ | ❌ | ❌ | ✅ | ✅ | ✅ |
+| Streaming | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ |
+| No-Label Detection | ✅ | ✅ | ✅ | Partial | ✅ | ✅ |
+| Root Cause | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ |
+| GPU Acceleration | ❌ | ✅ | ❌ | N/A | ❌ | Cloud |
+| Self-Hosted | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ |
+| Regulatory Compliance | ✅ | ❌ | ✅ | ❌ | ❌ | ✅ |
+| License | Apache 2.0 | BSD 3 | Apache 2.0 | Commercial | Apache 2.0 | Commercial |

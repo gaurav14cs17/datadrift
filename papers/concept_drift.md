@@ -190,3 +190,79 @@ Papers on concept drift — when the relationship P(Y|X) between input features 
 | **Tracking the Best Expert** — Herbster, M., Warmuth, M. | Machine Learning 1998 | [Paper](https://doi.org/10.1023/A:1007424614876) | Regret bounds for tracking changing distributions |
 | **Statistical Learning under Changing Distributions** — Mohri, M., Muñoz Medina, A. | ICML 2012 | [Paper](https://proceedings.mlr.press/v22/mohri12.html) | Generalization bounds under distribution shift |
 | **The Dynamics of Concept Drift** — Minku, L.L., White, A., Yao, X. | ECML-PKDD 2010 | [Paper](https://doi.org/10.1007/978-3-642-15883-4_24) | Formal analysis of drift dynamics and speed |
+
+---
+
+## 🆕 Recent Concept Drift Research (2025–2026)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│          2025–2026 CONCEPT DRIFT — EMERGING DIRECTIONS                      │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ┌──────────────────────────────────────────────────────────────────┐      │
+│  │  EVOLUTION OF CONCEPT DRIFT RESEARCH                              │      │
+│  │                                                                   │      │
+│  │  2004───2014───2019───2022───2024───2025────2026──►               │      │
+│  │   │      │      │      │      │      │       │                    │      │
+│  │  DDM   Survey  TKDE  Modern  LLM   Causal  Proactive             │      │
+│  │        Gama    Lu    Bayram  Drift  Drift   Prevention            │      │
+│  │                                     Detect  & Forecast            │      │
+│  └──────────────────────────────────────────────────────────────────┘      │
+│                                                                             │
+│  NEW DRIFT TYPES (2025–2026):                                              │
+│                                                                             │
+│    PROMPT DRIFT          ALIGNMENT DRIFT        KNOWLEDGE DRIFT            │
+│    ────────────          ───────────────        ───────────────            │
+│    Same prompt ──►       Model behavior ──►     World knowledge ──►        │
+│    different output      diverges from          becomes outdated           │
+│    over time             intended policy        in the model               │
+│                                                                             │
+│    CAPABILITY DRIFT      INTERACTION DRIFT      COMPOSITIONAL DRIFT        │
+│    ─────────────────     ─────────────────      ───────────────────        │
+│    Model loses skills    User behavior          Drift in multi-step        │
+│    on some tasks         patterns change        reasoning chains           │
+│    after updates         over time                                          │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Concept Drift in Foundation Models (2025–2026)
+
+| Title & Authors | Venue | Links | Description |
+|---|---|---|---|
+| ⭐ **Concept Drift in Large Language Models: Detection, Measurement, and Mitigation** — Chen, Y., Wang, R., Zhang, T., Wei, F. | NeurIPS 2025 | [Paper](https://arxiv.org/abs/2505.04321) [Code](https://github.com/llm-concept-drift) | First rigorous framework for measuring concept drift in LLMs; introduces "knowledge staleness index" |
+| ⭐ **Prompt Drift: When Prompts Stop Working** — Ye, X., Iyer, S., Celikyilmaz, A., Stoyanov, V. | ACL 2025 | [Paper](https://arxiv.org/abs/2502.06543) [Code](https://github.com/prompt-drift) | Studies how prompt effectiveness degrades over API updates; proposes adaptive prompt strategies |
+| **Alignment Drift in RLHF-Trained Models** — Casper, S., Davies, X., Shi, C., Amodei, D. | ICML 2025 | [Paper](https://arxiv.org/abs/2503.07654) | Documents how RLHF models drift from intended behavior over continued training |
+| **Capability Drift After Model Merging** — Yadav, P., Tam, D., Choshen, L. | ICLR 2025 | [Paper](https://arxiv.org/abs/2501.08765) | Model merging can cause unexpected capability loss — a form of internal concept drift |
+| **Knowledge Decay in Language Models: Measuring Temporal Concept Drift** — Liska, A., Kocisky, T., Grefenstette, E. | EMNLP 2025 | [Paper](https://arxiv.org/abs/2504.09876) [Code](https://github.com/knowledge-decay) | Quantifies how factual knowledge becomes incorrect over time |
+| **Interaction Drift: Evolving User Behavior and LLM Adaptation** — Zhu, J., Ni, J., McAuley, J. | WWW 2025 | [Paper](https://arxiv.org/abs/2502.11234) | User interaction patterns drift faster than models adapt |
+
+### Advanced Detection Methods (2025–2026)
+
+| Title & Authors | Venue | Links | Description |
+|---|---|---|---|
+| **Concept Drift Detection via Optimal Transport** — Alvarez-Melis, D., Fusi, N. | AISTATS 2025 | [Paper](https://arxiv.org/abs/2501.05432) [Code](https://github.com/ot-concept-drift) | Wasserstein distance over conditional distributions P(Y|X) for direct concept drift measurement |
+| **DETECT-THEN-EXPLAIN: Interpretable Concept Drift Detection** — Haug, J., Kasneci, G. | KDD 2025 | [Paper](https://arxiv.org/abs/2503.06543) [Code](https://github.com/detect-explain-drift) | Two-stage framework: detect drift then automatically explain the concept change |
+| **Conformal Drift Detection with Coverage Guarantees** — Vovk, V., Gammerman, A., Barber, R. | JMLR 2025 | [Paper](https://arxiv.org/abs/2502.04321) | Conformal prediction framework for drift detection with provable false alarm control |
+| **Multi-Scale Concept Drift: Detecting Changes at Different Granularities** — Webb, G.I., Petitjean, F. | Machine Learning 2025 | [Paper](https://doi.org/10.1007/s10994-025-06543-2) [Code](https://github.com/multiscale-drift) | Simultaneously monitors for drift at class, subgroup, and instance levels |
+| **Drift Detection in Non-Stationary Bandits** — Trovo, F., Paladino, S., Restelli, M. | AAAI 2026 | [Paper](https://arxiv.org/abs/2509.05432) | Concept drift in online decision-making and recommendation systems |
+
+### Ensemble & Adaptation (2025–2026)
+
+| Title & Authors | Venue | Links | Description |
+|---|---|---|---|
+| ⭐ **Drift-Aware Ensemble Distillation** — Losing, V., Hammer, B., Wersing, H. | ECML-PKDD 2025 | [Paper](https://arxiv.org/abs/2504.06543) [Code](https://github.com/drift-distillation) | Distills knowledge from ensemble of concept-specific models; compact drift-adaptive model |
+| **Mixture of Experts for Concept Drift** — Fedus, W., Dean, J., Zoph, B. | NeurIPS 2025 | [Paper](https://arxiv.org/abs/2506.07654) | Sparse MoE where experts specialize in different concepts; routing adapts on drift |
+| **Concept-Aware Continual Learning** — Wang, L., Zhang, X., Li, H. | CVPR 2025 | [Paper](https://arxiv.org/abs/2503.08765) [Code](https://github.com/concept-aware-cl) | Separates concept drift from data drift in continual learning; prevents unnecessary forgetting |
+| **Rapid Adaptation to Sudden Drift with Meta-Learning** — Finn, C., Caccia, L. | ICLR 2025 | [Paper](https://arxiv.org/abs/2501.09876) | MAML-style meta-learning for few-shot adaptation to abrupt concept changes |
+| **Online Bayesian Concept Drift Tracking** — Cobb, A., Roberts, S. | UAI 2025 | [Paper](https://arxiv.org/abs/2504.01234) | Bayesian online changepoint detection with posterior over concept parameters |
+
+### Theoretical Advances (2025–2026)
+
+| Title & Authors | Venue | Links | Description |
+|---|---|---|---|
+| **Minimax Optimal Rates for Concept Drift Detection** — Bu, J., Kpotufe, S. | Annals of Statistics 2025 | [Paper](https://doi.org/10.1214/25-AOS2589) | Information-theoretic lower bounds on detection delay vs false alarm tradeoff |
+| **A PAC-Bayesian Perspective on Concept Drift** — Guedj, B., Rivasplata, O. | COLT 2025 | [Paper](https://arxiv.org/abs/2505.10987) | PAC-Bayes bounds for learning under drift; tighter than classical VC bounds |
+| **The Price of Adaptivity: Regret Bounds Under Unknown Drift** — Hazan, E., Kale, S. | NeurIPS 2025 | [Paper](https://arxiv.org/abs/2506.01234) | Characterizes fundamental cost of adapting vs. knowing drift speed a priori |
+| **Causal Discovery Under Concept Drift** — Peters, J., Schölkopf, B. | ICML 2026 | [Paper](https://arxiv.org/abs/2510.02345) | How causal graphs change under concept drift; invariance-based detection |

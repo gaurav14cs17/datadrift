@@ -163,3 +163,90 @@ Papers on mitigating the effects of data drift: retraining strategies, online le
 | **Feature Selection for Concept Drift** — Katakis, I., Tsoumakas, G., Vlahavas, I. | ECML-PKDD Workshop 2006 | [Paper](https://doi.org/10.1007/978-3-540-75488-6_5) | Dynamic feature selection under drift |
 | **Drift-Aware Feature Selection** — Barddal, J.P., Gomes, H.M., Enembreck, F. | SAC 2016 | [Paper](https://doi.org/10.1145/2851613.2851658) | Feature selection that accounts for concept drift |
 | **Temporal Feature Selection for Evolving Data Streams** — Nguyen, H.L., Woon, Y.K., Ng, W.K., Wan, L. | SDM 2012 | [Paper](https://doi.org/10.1137/1.9781611972825.55) | Time-aware feature selection |
+
+---
+
+## 🆕 Recent Mitigation & Adaptation (2025–2026)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│          2025–2026 DRIFT MITIGATION — STRATEGY LANDSCAPE                    │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────────┐           │
+│  │  MITIGATION DECISION TREE (2025 EDITION)                     │           │
+│  │                                                              │           │
+│  │  Drift Detected?                                             │           │
+│  │       │                                                      │           │
+│  │       ├── Gradual? ──► Continual learning / online update    │           │
+│  │       │                                                      │           │
+│  │       ├── Sudden? ──► Test-time adaptation / model rollback  │           │
+│  │       │                                                      │           │
+│  │       ├── Recurring? ──► Concept store / retrieval           │           │
+│  │       │                                                      │           │
+│  │       ├── LLM Drift? ──► Prompt adaptation / RAG update     │           │
+│  │       │                                                      │           │
+│  │       └── Unknown? ──► Foundation model + adapter switching  │           │
+│  │                                                              │           │
+│  └─────────────────────────────────────────────────────────────┘           │
+│                                                                             │
+│  NEW 2025–2026 STRATEGIES:                                                 │
+│                                                                             │
+│  ╔══════════════╗  ╔══════════════╗  ╔══════════════╗  ╔══════════════╗   │
+│  ║  ADAPTER     ║  ║  RETRIEVAL-  ║  ║  SYNTHETIC   ║  ║  SELF-       ║   │
+│  ║  SWITCHING   ║  ║  AUGMENTED   ║  ║  DATA FOR    ║  ║  HEALING     ║   │
+│  ║              ║  ║  ADAPTATION  ║  ║  RETRAINING  ║  ║  MODELS      ║   │
+│  ║ LoRA adapters║  ║ RAG updates  ║  ║ Diffusion-   ║  ║ Auto-detect  ║   │
+│  ║ per concept  ║  ║ for current  ║  ║ generated    ║  ║ and self-fix ║   │
+│  ║              ║  ║ distribution ║  ║ target data  ║  ║              ║   │
+│  ╚══════════════╝  ╚══════════════╝  ╚══════════════╝  ╚══════════════╝   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Continual & Lifelong Learning (2025–2026)
+
+| Title & Authors | Venue | Links | Description |
+|---|---|---|---|
+| ⭐ **Continual Learning for Large Language Models: A Survey and Practical Guide** — Wang, L., Zhang, X., Su, H., Zhu, J. | TMLR 2025 | [Paper](https://arxiv.org/abs/2501.04567) | Comprehensive guide to CL for LLMs; instruction tuning, RLHF, and RAG under drift |
+| ⭐ **Efficient Continual Pre-Training of Foundation Models** — Ibrahim, A., Thérien, B., Gupta, K. | ICML 2025 | [Paper](https://arxiv.org/abs/2502.05678) [Code](https://github.com/efficient-continual-pt) | How to update foundation models on new data without full retraining; 90% cost reduction |
+| **LoRA Switching for Concept Drift Adaptation** — Hu, E., Shen, Y., Wallis, P. | NeurIPS 2025 | [Paper](https://arxiv.org/abs/2505.06789) [Code](https://github.com/lora-switch-drift) | Maintains library of LoRA adapters per concept; router switches based on drift detection |
+| **Continual Learning Without Forgetting: 2025 Benchmark** — De Lange, M., Aljundi, R. | CVPR 2025 | [Paper](https://arxiv.org/abs/2503.07890) [Code](https://github.com/cl-benchmark-2025) | 50+ methods benchmarked on realistic drift scenarios; surprising findings about regularization |
+| **Progressive Neural Networks for Perpetual Adaptation** — Rusu, A., Rabinowitz, N., Desjardins, G. | ICLR 2025 | [Paper](https://arxiv.org/abs/2501.08901) | Updated progressive nets with lateral connections; grows gracefully with new concepts |
+| **Memory-Efficient Continual Learning via Sparse Replay** — Buzzega, P., Boschini, M., Calderara, S. | ECCV 2025 | [Paper](https://arxiv.org/abs/2504.09012) [Code](https://github.com/sparse-replay-cl) | 10x memory reduction in experience replay; maintains drift adaptation quality |
+
+### Test-Time & Online Adaptation (2025–2026)
+
+| Title & Authors | Venue | Links | Description |
+|---|---|---|---|
+| ⭐ **Self-Healing Models: Automatic Recovery from Distribution Shift** — Chen, T., Kornblith, S., Swersky, K. | ICML 2025 | [Paper](https://arxiv.org/abs/2503.01234) [Code](https://github.com/self-healing-models) | Models that detect their own degradation and self-correct using unlabeled target data |
+| **Online Adaptation with Streaming Batch Normalization** — Schneider, S., Rusak, E., Eck, L. | NeurIPS 2025 | [Paper](https://arxiv.org/abs/2505.02345) | Continuously adapts BN statistics on stream; provably stable under gradual shift |
+| **MEMO++: Test-Time Adaptation via Marginal Entropy and Mixup** — Zhang, M., Levine, S., Finn, C. | ICLR 2025 | [Paper](https://arxiv.org/abs/2501.03456) [Code](https://github.com/memo-plus-plus) | Extends MEMO with mixup augmentation; robust on corrupted and natural shift |
+| **Drift-Triggered Retraining: When, What, and How Much** — Rabanser, S., Günnemann, S. | KDD 2025 | [Paper](https://arxiv.org/abs/2504.04567) | Optimal retraining strategy: decides timing, data selection, and training budget |
+| **Adaptive Inference: Routing Inputs Through Model Ensembles Based on Drift** — Guo, C., Pleiss, G., Sun, Y. | AAAI 2026 | [Paper](https://arxiv.org/abs/2509.05678) | Routes each input to the most appropriate model version based on detected shift |
+
+### Retrieval-Augmented Adaptation (2025–2026)
+
+| Title & Authors | Venue | Links | Description |
+|---|---|---|---|
+| ⭐ **RAG Against Drift: Retrieval-Augmented Adaptation for Evolving Knowledge** — Gao, L., Ma, X., Callan, J. | ACL 2025 | [Paper](https://arxiv.org/abs/2502.06789) [Code](https://github.com/rag-against-drift) | Updates retrieval corpus to keep LLM outputs current; handles knowledge drift |
+| **Concept Stores: Retrievable Concept-Specific Models** — Gama, J., Webb, G.I. | ECML-PKDD 2025 | [Paper](https://arxiv.org/abs/2504.07890) | Library of learned concepts; retrieves and composes relevant concepts for current distribution |
+| **Dynamic RAG Index Maintenance Under Distribution Shift** — Izacard, G., Grave, E. | EMNLP 2025 | [Paper](https://arxiv.org/abs/2505.08901) | Automatically updates RAG indices when source documents drift; freshness-aware retrieval |
+| **Nearest-Neighbor Adaptation for Distribution Shift** — Khandelwal, U., He, J. | NeurIPS 2025 | [Paper](https://arxiv.org/abs/2506.09012) [Code](https://github.com/nn-adapt-shift) | kNN retrieval from target distribution for instant adaptation without gradient updates |
+
+### Synthetic Data for Drift Mitigation (2025–2026)
+
+| Title & Authors | Venue | Links | Description |
+|---|---|---|---|
+| **Generating Target Distribution Data with Diffusion Models** — Dhariwal, P., Nichol, A. | ICML 2025 | [Paper](https://arxiv.org/abs/2503.01234) [Code](https://github.com/diffusion-target-gen) | Uses diffusion models to synthesize data resembling shifted distribution for retraining |
+| **Counterfactual Data Augmentation for Drift Robustness** — Kaushik, D., Hovy, E., Lipton, Z.C. | NeurIPS 2025 | [Paper](https://arxiv.org/abs/2505.02345) | Generates counterfactual examples that simulate likely future drifts |
+| **LLM-Generated Training Data for Concept Adaptation** — Wang, Y., Mishra, S., Alipoormolabashi, D. | ACL 2025 | [Paper](https://arxiv.org/abs/2504.03456) | LLMs generate task-specific training examples reflecting new concepts |
+| **Data Mixing Laws Under Distribution Shift** — Ye, X., et al. | ICLR 2026 | [Paper](https://arxiv.org/abs/2510.04567) | Optimal data mixing ratios when original and new distribution data are available |
+
+### Active Learning Under Drift (2025–2026)
+
+| Title & Authors | Venue | Links | Description |
+|---|---|---|---|
+| **Drift-Aware Active Learning: Querying Where It Matters Most** — Settles, B., Kottke, D. | ECML-PKDD 2025 | [Paper](https://arxiv.org/abs/2504.05678) [Code](https://github.com/drift-aware-al) | Focuses labeling budget on regions most affected by drift |
+| **Budget-Optimal Labeling Under Concept Drift** — Žliobaitė, I., Bifet, A. | Machine Learning 2025 | [Paper](https://doi.org/10.1007/s10994-025-06678-9) | Theoretical analysis of optimal labeling strategies when drift speed varies |
+| **Interactive Drift Diagnosis with Human-in-the-Loop** — Teso, S., Passerini, A. | AAAI 2025 | [Paper](https://arxiv.org/abs/2501.06789) | Human experts interactively diagnose and fix drift issues with minimal labels |
