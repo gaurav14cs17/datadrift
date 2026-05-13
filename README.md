@@ -956,6 +956,26 @@ print(f"MMD drift detected: {result_mmd['data']['is_drift']}")
 
 ---
 
+## Awesome-Data-Drift Paper Collection
+
+> For a comprehensive curated list of **200+ research papers**, organized by topic with links to code repositories, see the **[papers/](papers/)** directory.
+
+```
+papers/
+├── README.md                    ← Index + recommended papers
+├── surveys.md                   ← 25+ surveys, tutorials, books
+├── detection_methods.md         ← 45+ detection papers (KS, MMD, ADWIN, DDM...)
+├── concept_drift.md             ← 40+ concept drift papers
+├── covariate_shift.md           ← 25+ covariate shift & domain adaptation
+├── monitoring_mlops.md          ← 20+ production monitoring & MLOps
+├── mitigation_adaptation.md     ← 30+ retraining, online learning, adaptation
+├── drift_in_deep_learning.md    ← 25+ DNN, NLP, CV, LLM drift papers
+├── tools_frameworks.md          ← 20+ open-source tools & cloud platforms
+└── benchmarks_datasets.md       ← 15+ benchmarks & datasets
+```
+
+---
+
 ## Citation
 
 If you use this work in your research, please cite:
